@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water app</title>
+    <link rel="shortcut icon" href="Img/Gotita.png" type="image/x-icon"> 
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Img/School2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: normal;
+            color: white;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: white;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px; /* Reducido el padding */
+            font-size: 14px; /* Tamaño de fuente reducido */
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #mapa {
+            text-align: center;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+  
+<body>
+    <h1>Navegation</h1>
+    <button onclick="agregarImagen2()">Water level</button>
+    <button onclick="agregarImagen()">Availability</button>
+
+    <script> 
+
+        function agregarImagen() {
+            // Remueve la imagen existente si hay alguna
+            var mapa = document.getElementById("mapa");
+            mapa.innerHTML = "";
+
+            // Crea y agrega la nueva imagen
+            var imagen = document.createElement("img");
+            imagen.src = "Img/Availability.png"; 
+            imagen.style.width = "800px";
+            imagen.style.position = "center";
+            mapa.appendChild(imagen);
+        }
+
+            function agregarImagen2() {
+            // Remueve la imagen existente si hay alguna
+            var mapa = document.getElementById("mapa");
+            mapa.innerHTML = "";
+
+            // Crea y agrega la nueva imagen
+            var imagen = document.createElement("img");
+            imagen.src = "Img/Level-W.png"; 
+            imagen.style.width = "800px";
+            imagen.style.position = "center";
+            mapa.appendChild(imagen);
+        }
+    </script>
+
+
+    <h2>School map</h2>
+    <div id="mapa">
+        <img src="Img/MapaUPY.png" alt="School map" style="max-width: 60%;">
+    </div>
+</body>
+</html>
+
